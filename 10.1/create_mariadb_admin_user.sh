@@ -11,7 +11,7 @@ while [[ RET -ne 0 ]]; do
 done
 
 
-PASS=${MARIADB_PASS:-$("maria_dbpass")}
+PASS=${MARIADB_PASS:"maria_dbpass"}
 _word=$( [ ${MARIADB_PASS} ] && echo "preset" || echo "random" )
 echo "=> Creating MariaDB admin user with ${_word} password"
 
